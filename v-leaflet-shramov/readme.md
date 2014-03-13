@@ -2,7 +2,9 @@
 
 This module provides Vaadin wrappers for "Shramov" Leaflet extensions. Depends on v-leaflet project.
 
-Currently this add-on only supports Google maps layer. To use it, you'll need to provide Google Maps JS api to your host page. In it you also must pass in your Google Maps API key. Thus, it is not injected automatically, but you should provide it with e.g. BootstrapListener like this: 
+[Leaflet plugins by Pavel Shramov](https://github.com/shramov/leaflet-plugins/)
+
+Currently this wrapper only supports Google maps layer. To use it, you'll need to provide Google Maps JS api to your host page. In it you also must pass in your Google Maps API key. Thus, it is not injected automatically, but you should provide it with e.g. BootstrapListener like this: 
 
 'java
 @Override

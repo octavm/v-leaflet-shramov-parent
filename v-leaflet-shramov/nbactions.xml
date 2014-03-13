@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-gwtcompile</actionName>
+            <displayName>gwtcompile</displayName>
+            <goals>
+                <goal>vaadin:compile</goal>
+            </goals>
+            <properties>
+                <gwt.compiler.force>true</gwt.compiler.force>
+            </properties>
+        </action>
+        <action>
+            <actionName>CUSTOM-installwithouttests</actionName>
+            <displayName>installwithouttests</displayName>
+            <goals>
+                <goal>install</goal>
+            </goals>
+            <properties>
+                <skipTests>true</skipTests>
+            </properties>
+        </action>
+    </actions>

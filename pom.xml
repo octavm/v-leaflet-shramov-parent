@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.peimari.leaflet.shramov</groupId>
+    <artifactId>parent-pom</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Shramov Leaflet plugin wrappers for Java (Vaadin) and GWT, parent POM for loosely coupled projects</name>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+        </license>
+    </licenses>
+
+    <contributors>
+        <contributor>
+            <name>Matti Tahvonen</name>
+            <organization>Vaadin</organization>
+            <email>matti@vaadin.com</email>
+        </contributor>
+    </contributors>
+
+    <properties>
+        <project.build.encoding>UTF-8</project.build.encoding>
+    </properties>
+
+    <modules>
+        <module>g-leaflet-shramov</module>
+        <module>v-leaflet-shramov</module>
+    </modules>
+</project>

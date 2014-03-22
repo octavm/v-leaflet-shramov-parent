@@ -5,7 +5,6 @@ import java.net.SocketException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 
 import org.eclipse.jetty.server.Connector;
@@ -33,7 +32,7 @@ import org.jsoup.nodes.Element;
 
 public class TServer {
 
-    private static final int PORT = 9998;
+    private static final int PORT = 29998;
 
     /**
      *

@@ -8,6 +8,12 @@
     <artifactId>parent-pom</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
+    
+    <scm>
+        <url>git://github.com/mstahv/v-leaflet-shramov-parent.git</url>
+        <connection>scm:git:git://github.com/mstahv/v-leaflet-shramov-parent.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:/mstahv/v-leaflet-shramov-parent.git</developerConnection>
+    </scm>
 
     <name>Shramov Leaflet plugin wrappers for Java (Vaadin) and GWT, parent POM for loosely coupled projects</name>
 

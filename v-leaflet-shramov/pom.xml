@@ -9,10 +9,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <vaadin.version>7.1.8</vaadin.version>
-        <v-leaflet-version>0.5.4</v-leaflet-version>
+        <v-leaflet-version>0.5.5</v-leaflet-version>
         <g-leaflet-shramov-version>${project.version}</g-leaflet-shramov-version>
     </properties>
-
 
     <organization>
         <name>Vaadin Community</name>
@@ -37,7 +36,8 @@
             <name>Apache 2</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
-            <comments>A business-friendly OSS license</comments>
+            <comments>A business-friendly OSS license. Note, that the embedded 
+                JS library is licensed with BSD style license.</comments>
         </license>
     </licenses>
 
@@ -165,6 +165,18 @@
 
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <configuration>
+                        <pushChanges>false</pushChanges>
+                        <localCheckout>true</localCheckout>
+                        <useReleaseProfile>true</useReleaseProfile>
+                        <releaseProfiles>release</releaseProfiles>
+                        <goals>install assembly:single</goals>
+                    </configuration>
+                </plugin>
+                
                 <!-- Compile widget set for integration testing -->
                 <plugin>
                     <groupId>com.vaadin</groupId>

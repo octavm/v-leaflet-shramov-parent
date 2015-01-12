@@ -8,40 +8,37 @@ Vaadin module depends on [v-leaflet](https://github.com/mstahv/v-leaflet) Vaadin
 
 Releases can be downloaded via [Vaadin Directory](https://vaadin.com/directory).
 
+### Usage
+
+To use it, you'll need to provide Google Maps JS api to your host page. In it you also must pass in your Google Maps API key. Thus, it is not injected automatically, but you should provide it with e.g. BootstrapListener like this:
+
+```java
+@Override
+protected void servletInitialized() throws ServletException {
+    getService().addSessionInitListener(new SessionInitListener() {
+        @Override
+        public void sessionInit(SessionInitEvent event)
+                throws ServiceException {
+            event.getSession().addBootstrapListener(new BootstrapListener() {
+
+                @Override
+                public void modifyBootstrapFragment(BootstrapFragmentResponse response) {
+                }
+
+                @Override
+                public void modifyBootstrapPage(BootstrapPageResponse response) {
+                    Element script = response.getDocument().createElement("script");
+                    // FOR NON LOCAL TESTING, ADD API KEY!!
+                    // script.attr("src", "http://maps.google.com/maps/api/js?key=YOUR-API-KEY-HERE&sensor=false");
+                    script.attr("src", "http://maps.google.com/maps/api/js?sensor=false");
+                    response.getDocument().getElementsByTag("head").get(0).appendChild(script);
+                }
+            });
+
+```
+
+
 ### License
 
 Apache 2, but not that the underlaying JS library is licensed with BSD derivative. In any ways, couldn't be more open source than this.
 
-To use it, you'll need to provide Google Maps JS api to your host page. In it you also must pass in your Google Maps API key. Thus, it is not injected automatically, but you should provide it with e.g. BootstrapListener like this:
-
-'java
-public class MyAppServlet extends SpringVaadinServlet {
-
-    @Override
-    protected void servletInitialized() throws ServletException {
-        super.servletInitialized();
-        getService().addSessionInitListener(new SessionInitListener() {
-            @Override
-            public void sessionInit(SessionInitEvent event)
-                    throws ServiceException {
-                event.getSession().addBootstrapListener(new BootstrapListener() {
-
-                    @Override
-                    public void modifyBootstrapFragment(BootstrapFragmentResponse response) {
-                    }
-
-                    @Override
-                    public void modifyBootstrapPage(BootstrapPageResponse response) {
-                        Element script = response.getDocument().createElement("script");
-                        // FOR NON LOCAL TESTING, ADD API KEY!!
-                        // script.attr("src", "http://maps.google.com/maps/api/js?key=YOUR-API-KEY-HERE&sensor=false");
-                        script.attr("src", "http://maps.google.com/maps/api/js?sensor=false");
-                        response.getDocument().getElementsByTag("head").get(0).appendChild(script);
-                    }
-                });
-            }
-        });
-    }
-}
-
-'

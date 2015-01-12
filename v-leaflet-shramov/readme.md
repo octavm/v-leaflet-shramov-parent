@@ -6,7 +6,7 @@ This module provides Vaadin wrappers for "Shramov" Leaflet extensions. Depends o
 
 Currently this wrapper only supports Google maps layer. To use it, you'll need to provide Google Maps JS api to your host page. In it you also must pass in your Google Maps API key. Thus, it is not injected automatically, but you should provide it with e.g. BootstrapListener like this: 
 
-'java
+```java
 @Override
 protected void servletInitialized() throws ServletException {
     getService().addSessionInitListener(new SessionInitListener() {
@@ -29,4 +29,4 @@ protected void servletInitialized() throws ServletException {
                 }
             });
 
-'
+```

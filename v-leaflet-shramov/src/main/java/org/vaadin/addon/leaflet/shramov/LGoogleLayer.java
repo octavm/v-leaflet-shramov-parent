@@ -7,13 +7,11 @@ import org.vaadin.addon.leaflet.shramov.client.LeafletGoogleLayerState;
 /**
  * Provides Google Maps layers.
  * 
- * Note, that to use the add-on, one must also add google maps API (v3) to the 
- * "host page". A simple method to achieve this is using @JavaScript annotation.
- * Default is not added to this component as you should provide your own API key
- * to the url. See Google maps docs for more details.
+ * To use this addon, you'll need to provide Google Maps JS api to your host page. 
+ * In it you also must pass in your Google Maps API key. 
+ * Thus, it is not injected automatically, but you should provide it with the BootstrapListener 
+ * (see readme file for more an example)
  * 
- * Example (without API key, for local testing)
- * @JavaScript("http://maps.google.com/maps/api/js?v=3.2&amp;sensor=false")
  * 
  * @author mattitahvonenitmill
  */

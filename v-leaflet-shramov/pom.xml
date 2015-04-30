@@ -2,14 +2,14 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.vaadin.addon</groupId>
     <artifactId>v-leaflet-shramov</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.4-SNAPSHOT</version>
     <name>V-Leaflet Shramov extensions</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <vaadin.version>7.4.4</vaadin.version>
         <v-leaflet-version>0.6.3</v-leaflet-version>
-        <g-leaflet-shramov-version>0.0.1</g-leaflet-shramov-version>
+        <g-leaflet-shramov-version>0.0.2</g-leaflet-shramov-version>
     </properties>
 
     <organization>

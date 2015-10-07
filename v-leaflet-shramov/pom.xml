@@ -8,8 +8,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <vaadin.version>7.4.4</vaadin.version>
-        <v-leaflet-version>0.6.3</v-leaflet-version>
-        <g-leaflet-shramov-version>0.0.2</g-leaflet-shramov-version>
+        <v-leaflet-version>1.0.0-b3</v-leaflet-version>
+        <g-leaflet-shramov-version>0.0.3</g-leaflet-shramov-version>
     </properties>
 
     <organization>

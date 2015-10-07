@@ -1,7 +1,7 @@
 package org.vaadin.addon.leaflet.shramov.client;
 
 import com.vaadin.shared.ui.Connect;
-import org.peimari.gleaflet.client.ILayer;
+import org.peimari.gleaflet.client.Layer;
 import org.peimari.gleaflet.client.shramov.GoogleLayer;
 import org.peimari.gleaflet.client.shramov.GoogleLayerOptions;
 import org.vaadin.addon.leaflet.client.AbstractLeafletLayerConnector;
@@ -10,7 +10,7 @@ import org.vaadin.addon.leaflet.client.AbstractLeafletLayerConnector;
 public class LeafletGoogleLayerConnector extends
 		AbstractLeafletLayerConnector<GoogleLayerOptions> {
 
-	protected ILayer layer;
+	protected Layer layer;
 
 	@Override
 	public LeafletGoogleLayerState getState() {
@@ -38,7 +38,7 @@ public class LeafletGoogleLayerConnector extends
 	}
 
 	@Override
-	public ILayer getLayer() {
+	public Layer getLayer() {
 		return layer;
 	}
 }

@@ -1,7 +1,6 @@
 package org.peimari.gleaflet.client.shramov;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import org.peimari.gleaflet.client.ILayer;
+import org.peimari.gleaflet.client.Layer;
 import org.peimari.gleaflet.client.resources.LeafletShramovResourceInjector;
 
 /**
@@ -10,7 +9,7 @@ import org.peimari.gleaflet.client.resources.LeafletShramovResourceInjector;
  * 
  * @author mattitahvonen
  */
-public class GoogleLayer extends JavaScriptObject implements ILayer {
+public class GoogleLayer extends Layer {
     
     static {
         LeafletShramovResourceInjector.ensureInjected();

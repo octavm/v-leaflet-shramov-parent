@@ -22,8 +22,11 @@ public class LeafletShramovResourceInjector {
      * Override this with deferred binding to customize injected stuff
      */
     protected void injectResources() {
-        final String text = bundle.google().getText();
-        ScriptInjector.fromString(text).setWindow(nativeTopWindow()).inject();
+        final String googleText = bundle.google().getText();
+        ScriptInjector.fromString(googleText).setWindow(nativeTopWindow()).inject();
+
+        final String bingText = bundle.bing().getText();
+        ScriptInjector.fromString(bingText).setWindow(nativeTopWindow()).inject();
     }
 
     private static native JavaScriptObject nativeTopWindow() /*-{

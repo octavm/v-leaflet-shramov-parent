@@ -122,6 +122,8 @@ L.Google = L.Layer.extend({
 			function() { _this.onReposition(); });
 		this._google = map;
 
+		google.maps.event.addListener(map, 'rightclick',
+			function() { this._map.fire('contextmenu'); });
 		google.maps.event.addListenerOnce(map, 'idle',
 			function() { _this._checkZoomLevels(); });
 		google.maps.event.addListenerOnce(map, 'tilesloaded',

@@ -2,14 +2,14 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.vaadin.addon</groupId>
     <artifactId>v-leaflet-shramov</artifactId>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>2.0.0</version>
     <name>V-Leaflet Shramov extensions</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <vaadin.version>7.4.4</vaadin.version>
-        <v-leaflet-version>1.0.0-b3</v-leaflet-version>
-        <g-leaflet-shramov-version>0.0.3</g-leaflet-shramov-version>
+        <vaadin.version>8.0.0</vaadin.version>
+        <v-leaflet-version>2.0.0</v-leaflet-version>
+        <g-leaflet-shramov-version>2.0.0</g-leaflet-shramov-version>
     </properties>
 
     <organization>
@@ -46,14 +46,14 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.3.1</version>
+                <version>3.0.2</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -80,7 +80,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.1.2</version>
+                <version>3.0.1</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -348,22 +348,16 @@
             <version>${vaadin.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-webapp</artifactId>
-            <version>7.2.2.v20101205</version>
-            <scope>test</scope>
-        </dependency>
 
         <!-- If you have testbench licence, use that instead of raw selenium. Much 
         more robust results -->
 
-        <dependency>
+ <!--       <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-testbench</artifactId>
             <version>3.1.1</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
 
         <!-- Open source alternative to TestBench -->
         <!-- <dependency> -->
@@ -378,6 +372,13 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.10</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.vaadin</groupId>
+            <artifactId>addon-test-helpers</artifactId>
+            <version>2.0.alpha3</version>
             <scope>test</scope>
         </dependency>
 

@@ -7,10 +7,10 @@ import org.vaadin.addon.leaflet.shramov.client.LeafletBingLayerState;
 public class LBingLayer extends AbstractLeafletLayer {
 
     public enum Type {
-        AERIAL, ROAD, BIRDSEYE, AERIALWITHLABELS
+        Road, Aerial, AerialWithLabels, CanvasDark, CanvasLight, CanvasGray
     }
 
-    private Type type = Type.ROAD;
+    private Type type = Type.Road;
     private String key;
 
 	public LBingLayer(String key) {

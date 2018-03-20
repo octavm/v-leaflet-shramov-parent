@@ -4,14 +4,11 @@ import com.vaadin.shared.ui.*;
 import org.peimari.gleaflet.client.*;
 import org.peimari.gleaflet.client.shramov.BingLayer;
 import org.peimari.gleaflet.client.shramov.BingLayerOptions;
-import org.vaadin.addon.leaflet.client.AbstractLeafletLayerConnector;
+import org.vaadin.addon.leaflet.client.LeafletTileLayerConnector;
 import org.vaadin.addon.leaflet.shramov.LBingLayer;
 
-
 @Connect(LBingLayer.class)
-public class LeafletBingLayerConnector extends AbstractLeafletLayerConnector<BingLayerOptions> {
-
-    public Layer layer;
+public class LeafletBingLayerConnector extends LeafletTileLayerConnector {
 
     @Override
     public LeafletBingLayerState getState() {
@@ -20,23 +17,17 @@ public class LeafletBingLayerConnector extends AbstractLeafletLayerConnector<Bin
 
     @Override
     protected BingLayerOptions createOptions() {
-        return BingLayerOptions.create(getState().layertype);
-    }
-
-    @Override
-    protected void update() {
-        if (layer != null) {
-            removeLayerFromParent();
-        } else {
-            BingLayerOptions o = createOptions();
-            layer = BingLayer.create(getState().key, o);
+        BingLayerOptions o = super.createOptions().cast();
+        LeafletBingLayerState s = getState();
+        if (s.layerType != null) {
+            o.setType(s.layerType);
         }
-
-        addToParent(layer);
+        return o;
     }
 
     @Override
-    public Layer getLayer() {
-        return layer;
+    protected BingLayer createTileLayer(TileLayerOptions o) {
+        return BingLayer.create(getState().key, (BingLayerOptions) o);
     }
+
 }

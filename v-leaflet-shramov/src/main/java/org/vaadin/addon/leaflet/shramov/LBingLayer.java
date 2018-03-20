@@ -1,49 +1,34 @@
 package org.vaadin.addon.leaflet.shramov;
 
-import com.vividsolutions.jts.geom.Geometry;
-import org.vaadin.addon.leaflet.AbstractLeafletLayer;
+import org.vaadin.addon.leaflet.LTileLayer;
 import org.vaadin.addon.leaflet.shramov.client.LeafletBingLayerState;
 
-public class LBingLayer extends AbstractLeafletLayer {
+public class LBingLayer extends LTileLayer {
 
     public enum Type {
         Road, Aerial, AerialWithLabels, CanvasDark, CanvasLight, CanvasGray
     }
 
-    private Type type = Type.Road;
-    private String key;
-
 	public LBingLayer(String key) {
-		this.key = key;
+		this(key, Type.Road);
 	}
 
 	public LBingLayer(String key, Type type) {
-		this(key);
-        this.type = type;
+		getState().key = key;
+		getState().layerType = type.toString();
 	}
 
     public Type getType() {
-        return type;
+        return Type.valueOf(getState().layerType);
     }
 
     public void setType(Type type) {
-        this.type = type;
+        getState().layerType = type.toString();
         markAsDirty();
     }
 
-    @Override
-    public void beforeClientResponse(boolean initial) {
-        getState().layertype = type.toString();
-        getState().key = key;
-        super.beforeClientResponse(initial);
-    }
 	@Override
 	protected LeafletBingLayerState getState() {
 		return (LeafletBingLayerState) super.getState();
-	}
-
-	@Override
-	public Geometry getGeometry() {		
-		return null;
 	}
 }

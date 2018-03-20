@@ -1,9 +1,9 @@
 package org.peimari.gleaflet.client.shramov;
 
-import org.peimari.gleaflet.client.Layer;
+import org.peimari.gleaflet.client.TileLayer;
 import org.peimari.gleaflet.client.resources.LeafletShramovResourceInjector;
 
-public class BingLayer extends Layer {
+public class BingLayer extends TileLayer {
 
     static {
         LeafletShramovResourceInjector.ensureInjected();

@@ -1,15 +1,19 @@
 package org.peimari.gleaflet.client.shramov;
 
-import com.google.gwt.core.client.JavaScriptObject;
+import org.peimari.gleaflet.client.TileLayerOptions;
 
-public class BingLayerOptions extends JavaScriptObject {
+public class BingLayerOptions extends TileLayerOptions {
 
     protected BingLayerOptions() {
     }
 
-    public static native BingLayerOptions create(String type) /*-{
-        return {
-            type: type
-        };
-    }-*/;
+    public static native BingLayerOptions create()
+	/*-{
+		return {};
+	}-*/;
+
+    public native final void setType(String type)
+    /*-{
+		this.type = type;
+	}-*/;
 }

@@ -1,8 +1,9 @@
 package org.vaadin.addon.leaflet.shramov.client;
 
-import org.vaadin.addon.leaflet.shared.AbstractLeafletComponentState;
+import org.vaadin.addon.leaflet.shared.LeafletTileLayerState;
 
-public class LeafletBingLayerState extends AbstractLeafletComponentState {
-    public String layertype;
+public class LeafletBingLayerState extends LeafletTileLayerState {
+
+    public String layerType;
     public String key;
 }

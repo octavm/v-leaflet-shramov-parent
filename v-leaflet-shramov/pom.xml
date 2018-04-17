@@ -2,14 +2,14 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.vaadin.addon</groupId>
     <artifactId>v-leaflet-shramov</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.7</version>
     <name>V-Leaflet Shramov extensions</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <vaadin.version>7.4.4</vaadin.version>
-        <v-leaflet-version>1.0.6-SNAPSHOT</v-leaflet-version>
-        <g-leaflet-shramov-version>0.0.5</g-leaflet-shramov-version>
+        <vaadin.version>7.7.3</vaadin.version>
+        <v-leaflet-version>1.0.7-SNAPSHOT</v-leaflet-version>
+        <g-leaflet-shramov-version>0.0.6</g-leaflet-shramov-version>
     </properties>
 
     <organization>
@@ -191,11 +191,11 @@
                         <style>PRETTY</style>
                         <!-- We only need to compile the test widgetset, if not defined gwt 
                         module will also compile the add-on widgetset as well -->
-                        <module>org.vaadin.addon.leaflet.demoandtestapp.TestWidgetset</module>
+                        <module>org.vaadin.addon.leaflet.shramov.Widgetset</module>
                         <!-- If you do lots of e.g. plain css changes and don't wish to use 
                         hosted mode, you can force compile easily with uncommenting following rule -->
                         <!-- 						<force>true</force> -->
-                        <strict>true</strict>
+                        <!-- <strict>true</strict> -->
                     </configuration>
                 </plugin>
                 <plugin>
@@ -348,31 +348,13 @@
             <version>${vaadin.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-webapp</artifactId>
-            <version>7.2.2.v20101205</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- If you have testbench licence, use that instead of raw selenium. Much 
-        more robust results -->
 
         <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-testbench</artifactId>
-            <version>3.1.1</version>
+            <groupId>org.vaadin</groupId>
+            <artifactId>addon-test-helpers</artifactId>
+            <version>1.10</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- Open source alternative to TestBench -->
-        <!-- <dependency> -->
-        <!-- <groupId>org.seleniumhq.selenium</groupId> -->
-        <!-- <artifactId>selenium-firefox-driver</artifactId> -->
-        <!-- <version>2.25.0</version> -->
-        <!-- <scope>test</scope> -->
-        <!-- </dependency> -->
-
 
         <dependency>
             <groupId>junit</groupId>

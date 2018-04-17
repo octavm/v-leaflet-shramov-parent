@@ -5,7 +5,7 @@
 /* global google: true */
 
 L.Google = L.Layer.extend({
-	includes: L.Mixin.Events,
+	includes: L.Evented.prototype,
 
 	options: {
 		minZoom: 0,

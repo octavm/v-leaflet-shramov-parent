@@ -26,7 +26,7 @@ public class LeafletBingLayerConnector extends LeafletTileLayerConnector {
     }
 
     @Override
-    protected BingLayer createTileLayer(TileLayerOptions o) {
+    protected BingLayer createGridLayer(GridLayerOptions o) {
         return BingLayer.create(getState().key, (BingLayerOptions) o);
     }
 

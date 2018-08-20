@@ -123,7 +123,7 @@ L.Google = L.Layer.extend({
 		this._google = map;
 
 		google.maps.event.addListener(map, 'rightclick',
-			function() { this._map.fire('contextmenu'); });
+			function() { _this.fire('contextmenu'); });
 		google.maps.event.addListenerOnce(map, 'idle',
 			function() { _this._checkZoomLevels(); });
 		google.maps.event.addListenerOnce(map, 'tilesloaded',

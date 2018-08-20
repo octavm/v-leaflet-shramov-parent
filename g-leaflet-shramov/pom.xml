@@ -10,6 +10,11 @@
     <packaging>jar</packaging>
     <name>g-leaflet-shramov</name>
 
+    <organization>
+        <name>Vaadin Community</name>
+        <url>http://vaadin.com/forum/</url>
+    </organization>
+
     <licenses>
         <license>
             <name>Apache 2</name>

@@ -1,8 +1,3 @@
-/*
- * $Id:  $
- * 
- *  Copyright (C) 2015, CGI Group Inc. All rights reserved.
- */
 package org.vaadin.addon.leaflet.demoandtestapp.util;
 
 import com.vaadin.annotations.Widgetset;
